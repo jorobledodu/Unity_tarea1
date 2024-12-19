@@ -21,7 +21,7 @@ public class MoveItems : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "item" || other.tag == "item_terremoto")
+        if(other.tag == "item" || other.tag == "item_terremoto" || other.tag == "alien")
         {
             Debug.Log("tocando item");
 

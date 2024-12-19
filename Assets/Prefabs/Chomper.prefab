@@ -2802,7 +2802,7 @@ GameObject:
   - component: {fileID: 1720454985196755739}
   m_Layer: 0
   m_Name: Chomper
-  m_TagString: item
+  m_TagString: alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
