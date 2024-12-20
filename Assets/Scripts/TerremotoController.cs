@@ -25,8 +25,7 @@ public class TerremotoController : MonoBehaviour
         {
             Debug.Log("Empieza terremoto!!");
             StartCoroutine("Terremoto");
-        }
-        
+        }        
     }
 
     private void OnTriggerExit(Collider other)
@@ -35,8 +34,7 @@ public class TerremotoController : MonoBehaviour
         {
             Debug.Log("Fin terremoto");
             StopCoroutine("Terremoto");
-        }
-        
+        }        
     }
     IEnumerator Terremoto()
     {
@@ -51,7 +49,6 @@ public class TerremotoController : MonoBehaviour
 
                 modulos[i].GetComponent<Rigidbody>().AddForce(direccionFuerza * fuerzaTerremoto, ForceMode.Impulse);
             }
-            //mover cámara?
         }
     }
 }

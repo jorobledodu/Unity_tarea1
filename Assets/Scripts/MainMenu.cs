@@ -14,8 +14,6 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         m_AudioSource.Play();
-        // Cambia a la escena principal de juego
-        // Reemplaza "GameScene" con el nombre exacto de tu escena principal
         SceneManager.LoadScene("Tarea 1");
     }
 
