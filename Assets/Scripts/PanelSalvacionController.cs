@@ -1,15 +1,20 @@
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class PanelSalvacionController : MonoBehaviour
 {
     public TextMeshProUGUI score, maxScore;
     public static int aliens, maxAliens;
+    public static int numeroTotalAliens;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        numeroTotalAliens = GameObject.FindGameObjectsWithTag("alien").Length;
+        Debug.Log("numero aliens: " +  numeroTotalAliens);
+
         maxAliens = PlayerPrefs.GetInt("maxScore", 0);
         maxScore.text = "Max: " + maxAliens.ToString();
 
@@ -39,6 +44,12 @@ public class PanelSalvacionController : MonoBehaviour
             }
 
             Destroy(collision.gameObject);
+
+            if(aliens == numeroTotalAliens) 
+            {
+                Debug.Log("todos los aliens salvados");
+                SceneManager.LoadScene("Win");
+            }
 
         }
     }

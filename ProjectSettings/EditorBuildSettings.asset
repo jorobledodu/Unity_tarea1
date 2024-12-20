@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tarea 1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: cef92323aa322084aafb2a88a451e8ca
   - enabled: 0
     path: Assets/Scenes/Pause Menu.unity
     guid: a5383f945a10552408c2481d2eaca57b
