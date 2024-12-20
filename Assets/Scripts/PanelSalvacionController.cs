@@ -16,9 +16,10 @@ public class PanelSalvacionController : MonoBehaviour
         Debug.Log("numero aliens: " +  numeroTotalAliens);
 
         maxAliens = PlayerPrefs.GetInt("maxScore", 0);
-        maxScore.text = "Max: " + maxAliens.ToString();
+        maxScore.text = "Max: " + maxAliens.ToString();        
 
         aliens = 0;
+        score.text = "Aliens saved: 0/" + numeroTotalAliens.ToString();
     }
 
     // Update is called once per frame
@@ -33,10 +34,10 @@ public class PanelSalvacionController : MonoBehaviour
         {
             
             aliens++;
-            score.text = "Aliens saved: " + aliens.ToString();
+            score.text = "Aliens saved: " + aliens.ToString() + "/" + numeroTotalAliens.ToString();
 
-            
-            if(aliens > maxAliens)
+
+            if (aliens > maxAliens)
             {
                 maxAliens = aliens;
                 maxScore.text = "Max: " + maxAliens.ToString();
