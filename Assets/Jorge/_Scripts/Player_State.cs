@@ -2,16 +2,25 @@ using UnityEngine;
 
 public class Player_State : MonoBehaviour
 {
-    [field: SerializeField] public PlayerMovementState CurrentPlayerMovementState { get; private set; } = PlayerMovementState.Idle;
+    [field: SerializeField] public PlayerMovementState CurrentPlayerMovementState { get; private set; } = PlayerMovementState.Idling;
 
     public void SetPlayerMovementState(PlayerMovementState playerMovementState)
     {
         CurrentPlayerMovementState = playerMovementState;
     }
+
+    public bool IsGroundedState()
+    {
+        return CurrentPlayerMovementState == PlayerMovementState.Idling ||
+               CurrentPlayerMovementState == PlayerMovementState.Walking ||
+               CurrentPlayerMovementState == PlayerMovementState.Running ||
+               CurrentPlayerMovementState == PlayerMovementState.Sprinting;
+    }
 }
+
 public enum PlayerMovementState
 {
-    Idle = 0,
+    Idling = 0,
     Walking = 1,
     Running = 2,
     Sprinting = 3,
