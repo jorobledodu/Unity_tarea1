@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using UnityEngine.SceneManagement;
+using Gamekit3D.GameCommands;
 
 public class PanelSalvacionController : MonoBehaviour
 {
@@ -9,8 +10,13 @@ public class PanelSalvacionController : MonoBehaviour
     public static int aliens, maxAliens;
     public static int numeroTotalAliens;
 
+    //Sonidito
+    public AudioSource AudioSource;
+
+    //Para el cambio de Sprites
     public GameObject Alien1;
     public GameObject Alien2;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -54,6 +60,8 @@ public class PanelSalvacionController : MonoBehaviour
                 SceneManager.LoadScene("Win");
             }
 
+            AudioSource.Play(); 
+
             Invoke("CambioDeSprite1", 0.01f);
             Invoke("CambioDeSprite2", 1f);
 
@@ -64,12 +72,10 @@ public class PanelSalvacionController : MonoBehaviour
     {
         Alien1.SetActive(false);
         Alien2.SetActive(true);
-
     }
 
     private void CambioDeSprite2()
     {
-
         Alien1.SetActive(true);
         Alien2.SetActive(false);
     }
