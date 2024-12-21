@@ -11,13 +11,13 @@ public class VisualTutorial : MonoBehaviour
         Invoke("DesInstanciadorCanvas",13);
     }
 
-    void InstanciadorCanvas()
+    public void InstanciadorCanvas()
     {
         gameObject.SetActive(true);
        
     }
 
-    void DesInstanciadorCanvas()
+    public void DesInstanciadorCanvas()
     {
         gameObject.SetActive(false);
     }

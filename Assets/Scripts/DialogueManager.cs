@@ -65,4 +65,10 @@ public class DialogueManager : MonoBehaviour
         Time.timeScale = 1; // Resume the game
         UnityEngine.SceneManagement.SceneManager.LoadScene("Tarea 1");
     }
+    public void CloseDialogueImmediately()
+    {
+        // Immediately end the dialogue
+        currentLineIndex = dialogueLines.Length; // Skip all remaining lines
+        EndDialogue();
+    }
 }
