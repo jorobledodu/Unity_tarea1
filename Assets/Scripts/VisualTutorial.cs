@@ -14,6 +14,7 @@ public class VisualTutorial : MonoBehaviour
     void InstanciadorCanvas()
     {
         gameObject.SetActive(true);
+       
     }
 
     void DesInstanciadorCanvas()
