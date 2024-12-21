@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI; // Panel del menú de pausa
     private bool isPaused = false;
     AudioSource m_AudioSource;
+    public GameObject panelTutorial;
 
     private void Start()
     {
@@ -42,6 +43,7 @@ public class PauseMenu : MonoBehaviour
     {
         m_AudioSource.Play();
         pauseMenuUI.SetActive(true); // Muestra el menú de pausa
+        panelTutorial.SetActive(false);
         Time.timeScale = 0f; // Detiene el tiempo
         isPaused = true;
     }
