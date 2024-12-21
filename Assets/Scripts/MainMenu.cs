@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         m_AudioSource.Play();
-        SceneManager.LoadScene("Tarea 1");
+        SceneManager.LoadScene("DialogueScene");
     }
 
     // Función para el botón Credits
