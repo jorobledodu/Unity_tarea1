@@ -21,6 +21,7 @@ public class MainMenu : MonoBehaviour
     public void Credits()
     {
         m_AudioSource.Play();
+        SceneManager.LoadScene("Creditos");
 
         // Activar panel de créditos
 
