@@ -897,7 +897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Raquel Cerd\xE0 Losa \nCarlos Megali Tur\nJorge Robledo Durendez\nAdrian
+  m_text: "Raquel Cerd\xE1 Losa \nCarlos Megali Tur\nJorge Robledo Durendez\nAdrian
     Santiago Roda\nAlex Verd\xEDa Couto"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c459f2e51506beb44a36d6faa7fdcdfe, type: 2}
