@@ -40,7 +40,7 @@ public class TerremotoController : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(1f, 5f));
+            yield return new WaitForSeconds(Random.Range(5f, 15f));
             
             for (int i = 0; i < modulos.Length; i++)
             {
