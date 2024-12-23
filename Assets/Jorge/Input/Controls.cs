@@ -62,6 +62,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleWalk"",
+                    ""type"": ""Button"",
+                    ""id"": ""0ab04426-7d83-4806-9057-04c6d8a79dde"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -288,8 +297,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e146c2f4-36a0-4c8e-ad85-efd960513cbb"",
-                    ""path"": ""<Keyboard>/rightCtrl"",
-                    ""interactions"": """",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": ""MultiTap"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",
@@ -306,6 +315,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0d786066-828e-41e1-9c78-a849e1807ca8"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleWalk"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -318,6 +338,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_PlayerLocomotionMap_Look = m_PlayerLocomotionMap.FindAction("Look", throwIfNotFound: true);
         m_PlayerLocomotionMap_ToggleSprint = m_PlayerLocomotionMap.FindAction("ToggleSprint", throwIfNotFound: true);
         m_PlayerLocomotionMap_Jump = m_PlayerLocomotionMap.FindAction("Jump", throwIfNotFound: true);
+        m_PlayerLocomotionMap_ToggleWalk = m_PlayerLocomotionMap.FindAction("ToggleWalk", throwIfNotFound: true);
     }
 
     ~@Controls()
@@ -388,6 +409,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerLocomotionMap_Look;
     private readonly InputAction m_PlayerLocomotionMap_ToggleSprint;
     private readonly InputAction m_PlayerLocomotionMap_Jump;
+    private readonly InputAction m_PlayerLocomotionMap_ToggleWalk;
     public struct PlayerLocomotionMapActions
     {
         private @Controls m_Wrapper;
@@ -396,6 +418,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_PlayerLocomotionMap_Look;
         public InputAction @ToggleSprint => m_Wrapper.m_PlayerLocomotionMap_ToggleSprint;
         public InputAction @Jump => m_Wrapper.m_PlayerLocomotionMap_Jump;
+        public InputAction @ToggleWalk => m_Wrapper.m_PlayerLocomotionMap_ToggleWalk;
         public InputActionMap Get() { return m_Wrapper.m_PlayerLocomotionMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -417,6 +440,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @ToggleWalk.started += instance.OnToggleWalk;
+            @ToggleWalk.performed += instance.OnToggleWalk;
+            @ToggleWalk.canceled += instance.OnToggleWalk;
         }
 
         private void UnregisterCallbacks(IPlayerLocomotionMapActions instance)
@@ -433,6 +459,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @ToggleWalk.started -= instance.OnToggleWalk;
+            @ToggleWalk.performed -= instance.OnToggleWalk;
+            @ToggleWalk.canceled -= instance.OnToggleWalk;
         }
 
         public void RemoveCallbacks(IPlayerLocomotionMapActions instance)
@@ -456,5 +485,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnToggleSprint(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnToggleWalk(InputAction.CallbackContext context);
     }
 }

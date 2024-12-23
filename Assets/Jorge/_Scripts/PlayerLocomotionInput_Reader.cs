@@ -7,6 +7,7 @@ public class PlayerLocomotionInput_Reader : MonoBehaviour, Controls.IPlayerLocom
     [SerializeField] private bool _holdToSprint = true;
 
     public bool SprintToggledOn { get; private set; }
+    public bool WalkToggledOn { get; private set; }
     public Controls Controls { get; private set; }
     public Vector2 MovementInput { get; private set; }
     public Vector2 LookInput { get; private set; }
@@ -59,5 +60,12 @@ public class PlayerLocomotionInput_Reader : MonoBehaviour, Controls.IPlayerLocom
         if(!context.performed) return;
 
         JumpPressed = true;
+    }
+
+    public void OnToggleWalk(InputAction.CallbackContext context)
+    {
+        if(!context.performed) return;
+
+        WalkToggledOn = !WalkToggledOn;
     }
 }

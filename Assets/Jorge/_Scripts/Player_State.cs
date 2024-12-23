@@ -1,30 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_State : MonoBehaviour
-{
-    [field: SerializeField] public PlayerMovementState CurrentPlayerMovementState { get; private set; } = PlayerMovementState.Idling;
-
-    public void SetPlayerMovementState(PlayerMovementState playerMovementState)
+    public class Player_State : MonoBehaviour
     {
-        CurrentPlayerMovementState = playerMovementState;
-    }
+        [field: SerializeField] public PlayerMovementState CurrentPlayerMovementState { get; private set; } = PlayerMovementState.Idle;
 
-    public bool IsGroundedState()
+        public void SetPlayerMovementState(PlayerMovementState playerMovementState)
+        {
+            CurrentPlayerMovementState = playerMovementState;
+        }
+
+        public bool InGroundedState()
+        {
+            return IsStateGroundedState(CurrentPlayerMovementState);
+        }
+
+        public bool IsStateGroundedState(PlayerMovementState movementState)
+        {
+            return movementState == PlayerMovementState.Idle ||
+                   movementState == PlayerMovementState.Walking ||
+                   movementState == PlayerMovementState.Running ||
+                   movementState == PlayerMovementState.Sprinting;
+        }
+    }
+    public enum PlayerMovementState
     {
-        return CurrentPlayerMovementState == PlayerMovementState.Idling ||
-               CurrentPlayerMovementState == PlayerMovementState.Walking ||
-               CurrentPlayerMovementState == PlayerMovementState.Running ||
-               CurrentPlayerMovementState == PlayerMovementState.Sprinting;
+        Idle = 0,
+        Walking = 1,
+        Running = 2,
+        Sprinting = 3,
+        Jumping = 4,
+        Falling = 5,
+        Strafing = 6,
     }
-}
-
-public enum PlayerMovementState
-{
-    Idling = 0,
-    Walking = 1,
-    Running = 2,
-    Sprinting = 3,
-    Jumping = 4,
-    Falling = 5,
-    Strafing = 6,
-}

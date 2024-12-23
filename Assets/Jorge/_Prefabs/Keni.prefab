@@ -1424,6 +1424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2063787025477174617}
+  - component: {fileID: 450072722814292511}
   m_Layer: 0
   m_Name: DummyCamera
   m_TagString: Untagged
@@ -1448,6 +1449,57 @@ Transform:
   - {fileID: 390888762658096204}
   m_Father: {fileID: 5886949403741140842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &450072722814292511
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4662860734741522499}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &5010347722472242060
 GameObject:
   m_ObjectHideFlags: 0
@@ -2527,7 +2579,7 @@ CharacterController:
   m_Radius: 0.25
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.0001
+  m_SkinWidth: 0.01
   m_MinMoveDistance: 0.00001
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!95 &4397141391446877025
@@ -2565,18 +2617,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _characterController: {fileID: 3164092790419864152}
-  _playerCamera: {fileID: 2409739648634547395}
-  _runAcceleration: 35
-  _runSpeed: 4
-  _sprintAcceleration: 50
-  _sprintSpeed: 7
-  _drag: 20
-  _gravity: 25
-  _jumpSpeed: 1
-  _movingThreshold: 0.01
-  _lookSensitivityH: 0.1
-  _lookSensitivityV: 0.1
-  _lookLimitV: 70
+  _playerCamera: {fileID: 450072722814292511}
+  walkAcceleration: 25
+  walkSpeed: 2
+  runAcceleration: 35
+  runSpeed: 4
+  sprintAcceleration: 50
+  sprintSpeed: 7
+  inAirAcceleration: 25
+  drag: 20
+  gravity: 25
+  terminalVelocity: 50
+  jumpSpeed: 1
+  movingThreshold: 0.01
+  playerModelRotationSpeed: 5
+  rotateToTargetTime: 1.5
+  lookSenseH: 0.1
+  lookSenseV: 0.1
+  lookLimitV: 60
+  _groundLayers:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!114 &3230113402582353238
 MonoBehaviour:
   m_ObjectHideFlags: 0
