@@ -209,7 +209,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""558dfb1f-cc5e-4b2b-a44b-a0b7469d555b"",
-                    ""path"": ""<Gamepad>/rightStick/down"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -297,8 +297,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e146c2f4-36a0-4c8e-ad85-efd960513cbb"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": ""MultiTap"",
+                    ""path"": ""<Keyboard>/rightCtrl"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",
@@ -320,6 +320,28 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""0d786066-828e-41e1-9c78-a849e1807ca8"",
                     ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleWalk"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""24f19445-abc8-4de0-861b-ffeb0b55972b"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleWalk"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""74a06abf-4ac5-4dec-828f-dfe5055a6387"",
+                    ""path"": ""<Gamepad>/rightStickPress"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
