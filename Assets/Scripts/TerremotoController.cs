@@ -41,6 +41,8 @@ public class TerremotoController : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(5f, 15f));
+
+            GetComponent<AudioSource>().Play();
             
             for (int i = 0; i < modulos.Length; i++)
             {
