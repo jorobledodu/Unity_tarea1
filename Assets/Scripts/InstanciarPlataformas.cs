@@ -13,7 +13,7 @@ public class InstanciarPlataformas : MonoBehaviour
             Instantiate(plataforma, puntoOrigen.position, plataforma.transform.rotation);
         }
 
-        if (other.GetComponent<CharacterController>() != null)
+        if (other.tag == "Player")
         {
             Debug.Log("Keni al agua");
             other.transform.localPosition = puntoOrigen.position;
