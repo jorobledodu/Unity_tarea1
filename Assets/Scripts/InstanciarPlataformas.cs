@@ -12,5 +12,11 @@ public class InstanciarPlataformas : MonoBehaviour
             Destroy(other.gameObject);
             Instantiate(plataforma, puntoOrigen.position, plataforma.transform.rotation);
         }
+
+        if (other.GetComponent<CharacterController>() != null)
+        {
+            Debug.Log("Keni al agua");
+            other.transform.localPosition = puntoOrigen.position;
+        }
     }
 }
