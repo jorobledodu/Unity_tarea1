@@ -9,6 +9,8 @@ public class PanelSalvacionController : MonoBehaviour
     public TextMeshProUGUI score, maxScore;
     public static int aliens, maxAliens;
     public static int numeroTotalAliens;
+    int chompersSalvados = 0;
+    public TextMeshProUGUI puntos;
 
     //Sonidito
     public AudioSource AudioSource;
@@ -41,6 +43,16 @@ public class PanelSalvacionController : MonoBehaviour
     {
         if (collision.gameObject.tag == "alien")
         {
+            // salvar 3 chompers y disolverse
+            chompersSalvados++;
+            puntos.text = chompersSalvados.ToString() + "/3";
+            if(chompersSalvados == 3)
+            {
+                //disolverse
+            }
+
+
+
 
             aliens++;
             score.text = "Aliens saved: " + aliens.ToString() + "/" + numeroTotalAliens.ToString();
