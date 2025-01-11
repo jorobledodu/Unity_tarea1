@@ -3,6 +3,7 @@ using TMPro;
 using System;
 using UnityEngine.SceneManagement;
 using Gamekit3D.GameCommands;
+using System.Collections;
 
 public class PanelSalvacionController : MonoBehaviour
 {
@@ -19,6 +20,12 @@ public class PanelSalvacionController : MonoBehaviour
     public GameObject Alien1;
     public GameObject Alien2;
 
+    //EFECTO DISSOLVE:
+    [SerializeField] private Material dissolveMaterial; // Material de disolución
+    Material currentMaterial;
+    private float dissolveSpeed = 0.05f; // Velocidad de disolución
+    private Renderer[] childRenderers; // Renderers de los hijos
+    private float dissolveAmount = 0f; // Valor del parámetro de disolución
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,6 +38,12 @@ public class PanelSalvacionController : MonoBehaviour
 
         aliens = 0;
         score.text = "Aliens saved: 0/" + numeroTotalAliens.ToString();
+
+        
+        //EFECTO DISSOLVE:
+        // Obtener todos los renderers de los hijos
+        childRenderers = GetComponentsInChildren<Renderer>();
+        
     }
 
     // Update is called once per frame
@@ -49,10 +62,13 @@ public class PanelSalvacionController : MonoBehaviour
             if(chompersSalvados == 3)
             {
                 //disolverse
+                currentMaterial = new Material(dissolveMaterial);
+                for (int i = 0; i < childRenderers.Length; i++)
+                {                   
+                    childRenderers[i].material = currentMaterial;
+                }
+                StartCoroutine("Dissolve");  
             }
-
-
-
 
             aliens++;
             score.text = "Aliens saved: " + aliens.ToString() + "/" + numeroTotalAliens.ToString();
@@ -69,7 +85,11 @@ public class PanelSalvacionController : MonoBehaviour
             if (aliens == numeroTotalAliens)
             {
                 Debug.Log("todos los aliens salvados");
-                SceneManager.LoadScene("Win");
+
+                //ACTIVAR VÓRTICE
+
+
+                //SceneManager.LoadScene("Win");
             }
 
             AudioSource.Play(); 
@@ -90,5 +110,19 @@ public class PanelSalvacionController : MonoBehaviour
     {
         Alien1.SetActive(true);
         Alien2.SetActive(false);
+    }
+
+    IEnumerator Dissolve()
+    {
+        while (dissolveAmount < 1.0f)
+        {
+            dissolveAmount += dissolveSpeed;
+            currentMaterial.SetFloat("Dissolve", dissolveAmount);
+            Debug.Log("Valor del slider: " + currentMaterial.GetFloat("Dissolve"));
+            yield return new WaitForSeconds(dissolveSpeed); // Espera un frame
+        }
+
+        Debug.Log("Disolución completada");
+        Destroy(gameObject); 
     }
 }
