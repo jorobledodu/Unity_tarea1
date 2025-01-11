@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MaterialAgua.1
+  m_Name: MaterialAgua.1 1
   m_Shader: {fileID: -6465566751694194690, guid: 28de180bea5c7bc4f88812ea3b4ff86c,
     type: 3}
   m_Parent: {fileID: 0}
@@ -39,11 +39,11 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _AlturaOlas: 0.1
+    - _AlturaOlas: 0.2
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Tama_oOndas: 1000
-    - _VelocidadOlas: 0.05
+    - _Tama_oOndas: 30
+    - _VelocidadOlas: 0.1
     m_Colors:
     - _WaterColor: {r: 0, g: 0.7317447, b: 0.8679245, a: 0}
   m_BuildTextureStacks: []

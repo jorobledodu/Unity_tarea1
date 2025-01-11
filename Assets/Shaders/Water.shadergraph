@@ -101,6 +101,9 @@
         },
         {
             "m_Id": "cf770b5a799a468daab212d79980d8fa"
+        },
+        {
+            "m_Id": "775a27fd80d340df8a019221a16289dd"
         }
     ],
     "m_GroupDatas": [],
@@ -385,6 +388,9 @@
             },
             {
                 "m_Id": "92bcac9560a44fada5795ecdc1ee0aa5"
+            },
+            {
+                "m_Id": "775a27fd80d340df8a019221a16289dd"
             }
         ]
     },
@@ -1186,6 +1192,21 @@
 {
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "5f04d40f31314abc939a73f7d9378a4d",
+    "m_Id": 0,
+    "m_DisplayName": "Alpha",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Alpha",
+    "m_StageCapability": 2,
+    "m_Value": 0.5,
+    "m_DefaultValue": 1.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "60d93d0fb54f4fe682e6dd557bae566a",
     "m_Id": 4,
     "m_DisplayName": "Cells",
@@ -1506,6 +1527,40 @@
         "m_SerializableColors": []
     },
     "m_SerializedDescriptor": "SurfaceDescription.Emission"
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "775a27fd80d340df8a019221a16289dd",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.Alpha",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "5f04d40f31314abc939a73f7d9378a4d"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.Alpha"
 }
 
 {
@@ -2070,7 +2125,7 @@
         "m_Id": "29137685a05442069cd44d5bee1a6592"
     },
     "m_AllowMaterialOverride": false,
-    "m_SurfaceType": 0,
+    "m_SurfaceType": 1,
     "m_ZWriteControl": 0,
     "m_ZTestMode": 4,
     "m_AlphaMode": 0,

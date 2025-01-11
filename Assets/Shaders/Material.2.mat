@@ -29,6 +29,7 @@ Material:
     - _AnchoBorde: 0.05
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
+    - _Dissolve: 0
     m_Colors:
     - _ColorBase: {r: 0, g: 0.8862745, b: 0.17976883, a: 0}
     - _ColorSilueta: {r: 0.8396226, g: 0.67724276, b: 0.82103044, a: 0}
