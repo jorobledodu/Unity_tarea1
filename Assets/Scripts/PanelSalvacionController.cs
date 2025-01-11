@@ -1,7 +1,6 @@
 using UnityEngine;
 using TMPro;
 using System;
-using UnityEngine.SceneManagement;
 using Gamekit3D.GameCommands;
 using System.Collections;
 
@@ -26,6 +25,10 @@ public class PanelSalvacionController : MonoBehaviour
     private float dissolveSpeed = 0.05f; // Velocidad de disolución
     private Renderer[] childRenderers; // Renderers de los hijos
     private float dissolveAmount = 0f; // Valor del parámetro de disolución
+
+
+    //VÓRTICE
+    public GameObject vortice;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -82,14 +85,15 @@ public class PanelSalvacionController : MonoBehaviour
 
             Destroy(collision.gameObject);
 
-            if (aliens == numeroTotalAliens)
+            //if (aliens == numeroTotalAliens)
+            if (aliens == 3) //PARA PRUEBAS!!!!!!!
             {
                 Debug.Log("todos los aliens salvados");
 
                 //ACTIVAR VÓRTICE
+                vortice.SetActive(true);
 
-
-                //SceneManager.LoadScene("Win");
+                
             }
 
             AudioSource.Play(); 
