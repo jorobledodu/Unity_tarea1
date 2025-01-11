@@ -22,7 +22,7 @@ public class PanelSalvacionController : MonoBehaviour
     //EFECTO DISSOLVE:
     [SerializeField] private Material dissolveMaterial; // Material de disolución
     Material currentMaterial;
-    private float dissolveSpeed = 0.05f; // Velocidad de disolución
+    private float dissolveSpeed = 0.1f; // Velocidad de disolución
     private Renderer[] childRenderers; // Renderers de los hijos
     private float dissolveAmount = 0f; // Valor del parámetro de disolución
 
@@ -121,7 +121,7 @@ public class PanelSalvacionController : MonoBehaviour
         while (dissolveAmount < 1.0f)
         {
             dissolveAmount += dissolveSpeed;
-            currentMaterial.SetFloat("Dissolve", dissolveAmount);
+            currentMaterial.SetFloat("_Dissolve", dissolveAmount);
             Debug.Log("Valor del slider: " + currentMaterial.GetFloat("Dissolve"));
             yield return new WaitForSeconds(dissolveSpeed); // Espera un frame
         }
