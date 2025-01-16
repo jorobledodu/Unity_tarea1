@@ -85,8 +85,7 @@ public class PanelSalvacionController : MonoBehaviour
 
             Destroy(collision.gameObject);
 
-            //if (aliens == numeroTotalAliens)
-            if (aliens == 3) //PARA PRUEBAS!!!!!!!
+            if (aliens == numeroTotalAliens)           
             {
                 Debug.Log("todos los aliens salvados");
 
