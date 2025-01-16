@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4430415442710425805
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -7,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MaterialDisolve
-  m_Shader: {fileID: -6465566751694194690, guid: 9b447db41a92dca4d898de9edf2f5878,
+  m_Name: MaterialAgua.2 1
+  m_Shader: {fileID: -6465566751694194690, guid: 28de180bea5c7bc4f88812ea3b4ff86c,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -26,26 +39,12 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _AnchoBorde: 0.05
+    - _AlturaOlas: 0.09
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Dissolve: 0
+    - _Tama_oOndas: 30
+    - _VelocidadOlas: 0.1
     m_Colors:
-    - _Color: {r: 0.7924528, g: 0.7732806, b: 0.5943396, a: 0}
-    - _ColorBase: {r: 0.7294118, g: 0.49803925, b: 0.32549015, a: 0}
-    - _ColorSilueta: {r: 1, g: 1, b: 1, a: 0}
+    - _WaterColor: {r: 0, g: 0.7317447, b: 0.8679245, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &1028865740583814490
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 0

@@ -21,9 +21,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: EfectoPortal
-  m_Shader: {fileID: -6465566751694194690, guid: c9ee9d82663e1734f85868853e5ebd5e,
+  m_Shader: {fileID: -6465566751694194690, guid: 28de180bea5c7bc4f88812ea3b4ff86c,
     type: 3}
-  m_Parent: {fileID: 0}
+  m_Parent: {fileID: 2100000, guid: 9ac1f8971ff5e6340be405eaa334aa99, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -36,15 +36,12 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - _SampleTexture2D_07b53bc8c09141c198ad25a836a31746_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: e90e95cedbb002346ae0a3dcf23968a1, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _BUILTIN_QueueControl: 0
-    - _BUILTIN_QueueOffset: 0
+    - _AlturaOlas: 0.2
+    - _Tama_oOndas: 10
+    - _VelocidadOlas: 0.1
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
