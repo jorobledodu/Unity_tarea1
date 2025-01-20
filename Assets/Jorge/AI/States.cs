@@ -5,6 +5,7 @@ using Unity.Behavior;
 public enum States
 {
     Idle,
+	Patroll,
 	Nervous,
 	MoveToSafe
 }

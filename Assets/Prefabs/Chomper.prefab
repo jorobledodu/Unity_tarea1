@@ -3024,7 +3024,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7325851984915780196}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f06215412593d54caf30578f695efe3, type: 3}
   m_Name: 
@@ -3032,7 +3032,7 @@ MonoBehaviour:
   detectionRadius: 10
   detectionMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 64
   showDebugVisuals: 1
 --- !u!114 &8421701971064582919
 MonoBehaviour:
@@ -3050,6 +3050,7 @@ MonoBehaviour:
   m_BlackboardVariableOverridesList:
   - rid: 8534866008501911802
   - rid: 8534866008501911803
+  - rid: 8534866008501911804
   m_IsInitialised: 0
   m_IsStarted: 0
   references:
@@ -3073,6 +3074,22 @@ MonoBehaviour:
           m_Value1: 7225080965160370250
         Name: Target
         m_Value: {fileID: 0}
+    - rid: 8534866008501911804
+      type: {class: 'BlackboardVariable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule]], mscorlib]]',
+        ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 5309936357809379781
+          m_Value1: 1636629904785638038
+        Name: PatrolPoints
+        m_Value:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
 --- !u!1 &7370413414487913839
 GameObject:
   m_ObjectHideFlags: 0

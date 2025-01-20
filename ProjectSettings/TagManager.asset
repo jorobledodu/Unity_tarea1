@@ -9,6 +9,7 @@ TagManager:
   - item_terremoto
   - alien
   - vortice
+  - Salvacion
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - interactableLayer
   - Water
   - UI
-  - 
+  - Keni
   - 
   - Skybox
   - Player
