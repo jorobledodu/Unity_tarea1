@@ -10,6 +10,7 @@ TagManager:
   - alien
   - vortice
   - Salvacion
+  - alien_agente
   layers:
   - Default
   - TransparentFX

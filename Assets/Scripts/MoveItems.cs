@@ -23,7 +23,7 @@ public class MoveItems : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "item" || other.tag == "item_terremoto" || other.tag == "alien")
+        if (other.tag == "item" || other.tag == "item_terremoto" || other.tag == "alien" || other.tag == "alien_agente")
         {
             BehaviorGraphAgent behaviorGraphAgent = other.GetComponent<BehaviorGraphAgent>();
             NavMeshAgent navMeshAgent = other.GetComponent<NavMeshAgent>();
@@ -35,7 +35,7 @@ public class MoveItems : MonoBehaviour
             {
                 if (!haCogido)
                 {
-                    if (other.tag == "alien")
+                    if (other.tag == "alien_agente")
                     {
                         behaviorGraphAgent.enabled = false;
                         navMeshAgent.enabled = false;
@@ -54,7 +54,7 @@ public class MoveItems : MonoBehaviour
             {
                 if (haCogido)
                 {
-                    if (other.tag == "alien")
+                    if (other.tag == "alien_agente")
                     {
                         behaviorGraphAgent.SetVariableValue("IsSafe", true);
 
