@@ -33,7 +33,7 @@ public class PanelSalvacionController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        numeroTotalAliens = GameObject.FindGameObjectsWithTag("alien").Length;
+        numeroTotalAliens = GameObject.FindGameObjectsWithTag("alien").Length + GameObject.FindGameObjectsWithTag("alien_agente").Length;
         Debug.Log("numero aliens: " + numeroTotalAliens);
 
         maxAliens = PlayerPrefs.GetInt("maxScore", 0);
